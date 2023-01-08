@@ -1,11 +1,4 @@
-FROM ubuntu:latest as builder
-
-RUN apt-get update
-RUN apt-get install curl -y
-RUN curl -L -o /tmp/go.sh https://install.direct/go.sh
-RUN chmod +x /tmp/go.sh
-RUN /tmp/go.sh
-
+FROM v2ray/official as builder
 
 FROM alpine:3.11
 
